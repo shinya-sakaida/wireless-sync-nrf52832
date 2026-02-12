@@ -78,12 +78,11 @@ Sync and pattern propagate hop-by-hop
 
 The system uses intermittent communication after synchronization.
 
-- **TX interval**: every 250 ms (TX duration ? 3 ms)
-- **RX interval**: every 10 seconds (RX duration ? 25 ms)
+- **TX interval**: every 250 ms (TX duration ≈ 3 ms)
+- **RX interval**: every 10 seconds (RX duration ≈ 25 ms)
 - **Supply voltage**: 3.0 V
 - **DC/DC converter**: Enabled
-- **TX output power**: +4 dBm (radio current ? 12?16 mA during TX)
-
+- **TX output power**: +4 dBm (radio current ≈ 12–16 mA during TX)
 **Average current consumption:**  
 ** 0.3 mA @ 3.0 V (UART OFF)**
 
@@ -134,4 +133,5 @@ wait **at least 60 seconds** between button presses for stable operation.
 
 This project is based on Nordic Semiconductor example code.
 The original Nordic license header is retained in `main.c`.
+
 
