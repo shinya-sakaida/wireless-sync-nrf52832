@@ -8,6 +8,7 @@ The system synchronizes LED blinking patterns across multiple boards using a
 simple **proprietary radio protocol**, without node IDs or parent/child roles.
 
 
+
 This wireless synchronization system operates by having each radio node periodically transmit a synchronization request signal to other nodes, while all nodes perform reception at intervals that are integer multiples of that transmit period.
 
 By executing this common behavior across all nodes, synchronization is established naturally without requiring a master node or centralized control.
@@ -21,6 +22,7 @@ As a result, even in the presence of interference from other nodes, the desired 
 This system is based on the principle that when all nodes attempt to synchronize using the same behavior, the network naturally becomes aligned. We refer to this concept as the **“alignment principle.”**
 
 Within this framework, the capture effect plays an essential role by suppressing mutual interference among nodes and supporting robust and stable synchronization across the system.
+
 ---
 
 ## Features
