@@ -7,6 +7,20 @@ implemented on **nRF52832** using the **nRF52 DK (PCA10040)**.
 The system synchronizes LED blinking patterns across multiple boards using a
 simple **proprietary radio protocol**, without node IDs or parent/child roles.
 
+
+This wireless synchronization system operates by having each radio node periodically transmit a synchronization request signal to other nodes, while all nodes perform reception at intervals that are integer multiples of that transmit period.
+
+By executing this common behavior across all nodes, synchronization is established naturally without requiring a master node or centralized control.
+
+In this process, multiple nodes may transmit synchronization request signals at nearly the same time, which can lead to signal collisions.
+
+However, this system utilizes the **capture effect** inherent in wireless communication. Even when multiple signals overlap, the receiver locks onto a single synchronization request signal that arrives slightly earlier or has a relatively stronger signal level, enabling stable reception of that signal.
+
+As a result, even in the presence of interference from other nodes, the desired signal is preferentially demodulated, and the effects of collisions are effectively mitigated.
+
+This system is based on the principle that when all nodes attempt to synchronize using the same behavior, the network naturally becomes aligned. We refer to this concept as the **“alignment principle.”**
+
+Within this framework, the capture effect plays an essential role by suppressing mutual interference among nodes and supporting robust and stable synchronization across the system.
 ---
 
 ## Features
